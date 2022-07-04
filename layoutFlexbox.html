@@ -4,71 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos - Flex Grow </title>
+    <title>Fundamentos - Flex Basis </title>
     <style>
         .flex-container{
-            max-width: 350px;           
+            max-width: 500px;           
             display: flex;          
-            border: 2px solid black; 
-            margin-bottom: 20px;     
-            justify-content: center;      
+            border: 2px solid black;               
         }
         .item{
             background-color: orangered;
-            padding: 10px;
             margin: 5px;
             text-align: center;
             color: white;            
         }
-        .fg-0{
-            flex-grow: 0;
+        .bauto{
+            flex-basis: auto;
         }
         .fg-1{
-            flex-grow: 1;
+           flex-grow: 1; 
         }
         .fg-2{
             flex-grow: 2;
         }
-        .fg-3{
-            flex-grow: 3;
+        .b-0{
+            flex-basis: 0;
         }
+        .w100 fg-1{
+            flex-basis: 100;
+        }
+       
      </style>
 </head>
 <body>
-    <p>flex-grow: 0</p>
+   <p>auto</p>
     <div class="flex-container">
-        <class class="item fg-0">A</class>
-        <class class="item fg-0">B</class>
-        <class class="item fg-0">C</class>
-        <class class="item fg-0">D</class>
-    </div>   
-    <p>flex-grow: 1</p>
-    <div class="flex-container">
-        <class class="item fg-1">A</class>
-        <class class="item fg-1">B</class>
-        <class class="item fg-1">C</class>
-        <class class="item fg-1">D</class>
-    </div>   
-    <p>flex-grow: 2</p>
-    <div class="flex-container">
-        <class class="item fg-2">AAAAAAAAAA</class>
-        <class class="item fg-2">BBB</class>
-        <class class="item fg-2">C</class>
-        <class class="item fg-2">D</class>
+        <class class="item bauto fg-1">A</class>
+        <class class="item bauto fg-1">BBB</class>
+        <class class="item bauto fg-1">C</class>
+        <class class="item bauto fg-2">DEF</class>
     </div> 
-    <p>flex-grow: 3</p>
+
+    <p>zero</p>
     <div class="flex-container">
-        <class class="item fg-3">A</class>
-        <class class="item fg-3">B</class>
-        <class class="item fg-3">C</class>
-        <class class="item fg-3">D</class>
-    </div>  
-    <p>flex-grow: alternados</p>
+        <class class="item b-0 fg-1">A</class>
+        <class class="item b-0 fg-1">BBBBBB2350</class>
+        <class class="item b-0 fg-1">C</class>
+        <class class="item b-0 fg-2">DEF</class>
+    </div> 
+
+    <p>basis + width</p>
     <div class="flex-container">
-        <class class="item fg-1">A</class>
-        <class class="item fg-2">B</class>
-        <class class="item fg-2">C</class>
-        <class class="item fg-1">D</class>
-    </div>      
+        <class class="item w100 fg-1">AA</class>
+        <class class="item w100 fg-1">BBB</class>
+        <class class="item w100 fg-1">CCC</class>
+        <class class="item w100 fg-1">DEF</class>
+    </div>       
+     
 </body>
 </html>
