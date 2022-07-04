@@ -4,106 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos - Align Content </title>
+    <title>Fundamentos - Flex Grow </title>
     <style>
-        .container{
-            height: 350px;
-            max-width: 300px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            border: 1px solid black;
-            
+        .flex-container{
+            max-width: 350px;           
+            display: flex;          
+            border: 2px solid black; 
+            margin-bottom: 20px;     
+            justify-content: center;      
         }
         .item{
             background-color: orangered;
-            padding: 0 5px;
+            padding: 10px;
             margin: 5px;
-            flex: 1;
             text-align: center;
-            color: white;
-            
+            color: white;            
         }
-        .stretch{
-            align-content: stretch;
+        .fg-0{
+            flex-grow: 0;
         }
-        .center{
-            align-content: center;
+        .fg-1{
+            flex-grow: 1;
         }
-        .flex-start{
-            align-content: flex-start;
+        .fg-2{
+            flex-grow: 2;
         }
-        .flex-end{
-            align-content: flex-end;
+        .fg-3{
+            flex-grow: 3;
         }
-        .space-around{
-            align-content: space-around;
-        }
-        .space-between{
-            align-content: space-between;
-        }
-
-    </style>
+     </style>
 </head>
 <body>
-    <p>stretch</p>
-    <div class="container stretch">
-        <div class="item">Lorem ipsum dolor sit</div>
-        <div class="item">Lorem ipsum dolor sit amet</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero nunc. Maecenas molestie id velit quis finibus.</div>
-        <div class="item"> Pellentesque non libero</div>
-        <div class="item"> Pellentesque non libero</div>
-    </div>
-
-    <p>center</p>
-    <div class="container center">
-        <div class="item">Lorem ipsum dolor sit</div>
-        <div class="item">Lorem ipsum dolor sit amet</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero nunc. Maecenas molestie id velit quis finibus.</div>
-        <div class="item"> Pellentesque non libero</div>
-        <div class="item"> Pellentesque non libero</div>
-    </div>
-
-    <p>flex-start</p>
-    <div class="container flex-start">
-        <div class="item">Lorem ipsum dolor sit</div>
-        <div class="item">Lorem ipsum dolor sit amet</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero nunc. Maecenas molestie id velit quis finibus.</div>
-        <div class="item"> Pellentesque non libero</div>
-        <div class="item"> Pellentesque non libero</div>
-    </div>
-
-    <p>flex-end</p>
-    <div class="container flex-end">
-        <div class="item">Lorem ipsum dolor sit</div>
-        <div class="item">Lorem ipsum dolor sit amet</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero nunc. Maecenas molestie id velit quis finibus.</div>
-        <div class="item"> Pellentesque non libero</div>
-        <div class="item"> Pellentesque non libero</div>
-    </div>
-
-    <p>space-around</p>
-    <div class="container space-around">
-        <div class="item">Lorem ipsum dolor sit</div>
-        <div class="item">Lorem ipsum dolor sit amet</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero nunc. Maecenas molestie id velit quis finibus.</div>
-        <div class="item"> Pellentesque non libero</div>
-        <div class="item"> Pellentesque non libero</div>
-    </div>
-
-    <p>space-between</p>
-    <div class="container space-between">
-        <div class="item">Lorem ipsum dolor sit</div>
-        <div class="item">Lorem ipsum dolor sit amet</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero</div>
-        <div class="item">Lorem ipsum dolor sit amet. Pellentesque non libero nunc. Maecenas molestie id velit quis finibus.</div>
-        <div class="item"> Pellentesque non libero</div>
-        <div class="item"> Pellentesque non libero</div>
-    </div>
+    <p>flex-grow: 0</p>
+    <div class="flex-container">
+        <class class="item fg-0">A</class>
+        <class class="item fg-0">B</class>
+        <class class="item fg-0">C</class>
+        <class class="item fg-0">D</class>
+    </div>   
+    <p>flex-grow: 1</p>
+    <div class="flex-container">
+        <class class="item fg-1">A</class>
+        <class class="item fg-1">B</class>
+        <class class="item fg-1">C</class>
+        <class class="item fg-1">D</class>
+    </div>   
+    <p>flex-grow: 2</p>
+    <div class="flex-container">
+        <class class="item fg-2">AAAAAAAAAA</class>
+        <class class="item fg-2">BBB</class>
+        <class class="item fg-2">C</class>
+        <class class="item fg-2">D</class>
+    </div> 
+    <p>flex-grow: 3</p>
+    <div class="flex-container">
+        <class class="item fg-3">A</class>
+        <class class="item fg-3">B</class>
+        <class class="item fg-3">C</class>
+        <class class="item fg-3">D</class>
+    </div>  
+    <p>flex-grow: alternados</p>
+    <div class="flex-container">
+        <class class="item fg-1">A</class>
+        <class class="item fg-2">B</class>
+        <class class="item fg-2">C</class>
+        <class class="item fg-1">D</class>
+    </div>      
 </body>
 </html>
