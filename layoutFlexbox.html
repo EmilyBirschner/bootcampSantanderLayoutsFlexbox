@@ -4,70 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos - Flex Shrink </title>
+    <title>Fundamentos - Flex </title>
     <style>
         .flex-container{
-            max-width: 350px;           
+            max-width: 400px;           
             display: flex;          
             border: 2px solid black;     
             margin-bottom: 10px;          
         }
         .item {
-            background-color: orangered;
-            margin: 5px;
+            background-color: grey;
             text-align: center;
             color: white; 
-            font-size: 24px;           
-        }     
-       .s-1{
-        flex-shrink: 1;
-       }
-       .fg-1{
-        flex-grow: 1;
-       }
-       .s-0{
-        flex-shrink: 0;
-        flex-basis: 100px;
-       }
-       .s-2{
-        flex-shrink: 2;
-        flex-basis: 100px;
-       }
-       .s-3{
-        flex-shrink: 3;
-        flex-basis: 100px;
-       }
+            font-size: 24px;  
+            margin: 5px;         
+        }    
+        
+        .flex-1{
+            flex: 1;
+            /* grow=1, shrink=1, basis=0*/
+        }
+        .largura{
+            width: 200px;
+        }
+        .flex-2{
+            flex: 2;
+            /* grow=2, shrink=1, basis=0*/
+        }
+      
      </style>
 </head>
 <body>
-   <p>flex-shrink: 1</p>
+   <p>flex: 1</p>
     <div class="flex-container">
-        <div class="item s-1 fg-1">A</div>
-        <div class="item s-1 fg-1">B</div>
-        <div class="item s-1 fg-1">C</div>
-        <div class="item s-1 fg-1">D</div>
-        <div class="item s-1 fg-1">E</div>
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">BBB</div>
+        <div class="item flex-1">CC</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
     </div>
-    <p>flex-shrink: 1 (conteudo tamanho diferente)</p>
+    <p>flex: mix</p>
     <div class="flex-container">
-        <div class="item s-1 fg-1">A</div>
-        <div class="item s-1 fg-1">Lorem ipsum dolor </div>
-        <div class="item s-1 fg-1">C</div>
-        <div class="item s-1 fg-1">D</div>       
+        <div class="item flex-1">A</div>
+        <div class="item flex-2">BBB</div>
+        <div class="item flex-2">CC</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
     </div>
-    <p>flex-shrink: 0  | basis: 100px</p>
+    <p>width ignorado -> basis=0</p>
     <div class="flex-container">
-        <div class="item s-0 fg-1">A</div>
-        <div class="item s-0 fg-1">Lorem ipsum dolor </div>
-        <div class="item s-0 fg-1">C</div>
-        <div class="item s-0 fg-1">D</div>       
+        <div class="item flex-1 largura">A</div>
+        <div class="item flex-1 largura">BBB</div>
+        <div class="item flex-1 largura">CC</div>
+        <div class="item flex-1 largura">D</div>
+        <div class="item flex-1 largura">EF</div>
     </div>
-    <p>flex-shrink: mix  | basis: 100px</p>
-    <div class="flex-container">
-        <div class="item s-1 fg-1">A</div>
-        <div class="item s-2 fg-1">Lorem ipsum dolor </div>
-        <div class="item s-2 fg-1">C</div>
-        <div class="item s-3 fg-1">DDD</div>       
-    </div>
+  
 </body>
 </html>
